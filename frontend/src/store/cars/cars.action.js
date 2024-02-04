@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.successCars = exports.errorCars = exports.loadCars = void 0;
+const cars_types_1 = require("./cars.types");
+const loadCars = () => ({ type: cars_types_1.CARS_LOADING });
+exports.loadCars = loadCars;
+const errorCars = () => ({ type: cars_types_1.CARS_ERROR });
+exports.errorCars = errorCars;
+const successCars = (payload) => ({ type: cars_types_1.CARS_SUCCESS, payload });
+exports.successCars = successCars;
